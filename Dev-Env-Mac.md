@@ -1,5 +1,6 @@
 ## Mac开发环境
 ### 安装 Homebrew
+- 安装命令
     ```
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```  
