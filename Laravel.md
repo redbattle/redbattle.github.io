@@ -4,11 +4,11 @@
     ```
     composer install
     ```
-- 更改`storage`目录权限
+- 修改`storage`目录权限
     ```
     sudo chmod -R 777 storage
     ```
-- 读取上传文件使用命令 `storage:link` 来创建符号链接：
+- 上传本地文件使用命令 `storage:link` 来创建符号链接：
     ```
     php artisan storage:link
     # 根据需要迁移上传文件
@@ -21,11 +21,11 @@
     php artisan key:generate
     
     ```
-- 修改配置文件后执行缓存
+- 执行缓存（修改配置文件）
    ```
    php artisan config:cache
    ```
-- 修改seed文件后执行重载
+- 执行重载（修改seed文件）
    ```
    composer dump-autoload
    ```
