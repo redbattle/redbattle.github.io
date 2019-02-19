@@ -1,0 +1,20 @@
+## Mysql 基本操作
+- 登录 `mysql -h 服务器地址 -P 端口号 -u 用户名 -p`
+    ```
+    # 敲回车后会提示输入密码
+    mysql -h 192.186.3.50 -P 3306 -u root -p
+    ```
+- 导出-数据和表结构 `mysqldump -h -u 用户名 -p 数据库名 > 数据库名.sql`
+    ```
+    # 敲回车后会提示输入密码
+    mysqldump -h -u root -p abc > abc.sql
+    ```
+- 导出-仅表结构 `mysqldump -h -u 用户名 -p -d 数据库名 > 数据库名.sql`
+    ```
+    # 敲回车后会提示输入密码
+    mysqldump -h -u root -p -d abc > abc.sql
+    ```
+- 导入-sql文件 `mysql -u 用户名 -p 数据库名 < 数据库名.sql`
+    ```
+    mysql -u abc_f -p abc < abc.sql
+    ```
