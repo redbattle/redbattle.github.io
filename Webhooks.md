@@ -1,0 +1,7 @@
+## Webhooks 报错解决
+- 报错信息 `Host key verification failed. fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists.`
+    ```
+    # 解决
+    添加 ssh-key
+    修改 ssh 文件用户组与 nginx 保持一致
+    ```
