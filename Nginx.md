@@ -35,15 +35,12 @@
     ```
     server {
     	listen 80 ;
-    	
     	server_name <domain>;
     	root <path to project>;
     	index index.php index.html index.htm;
-    
     	location / {
     	    try_files $uri $uri/ /index.php?$query_string;
     	}
-    
     	location ~ \.php$ {
             fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
             fastcgi_index index.php;
@@ -57,7 +54,7 @@
     server {
         listen       80;
         server_name  <domain>;
-    	root <path to project>;
+        root <path to project>;
         location / {
 	        index  index.html index.htm index.php;
             try_files $uri $uri/ /index.php?$args;
