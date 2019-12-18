@@ -1,4 +1,5 @@
 ## Nginx服务器配置
+
 - https
     ```
     # 80 重定向到 443
@@ -31,24 +32,26 @@
         }
     }
     ```
+    
 - http
     ```
     server {
-    	listen 80 ;
-    	server_name <domain>;
-    	root <path to project>;
-    	index index.php index.html index.htm;
-    	location / {
-    	    try_files $uri $uri/ /index.php?$query_string;
-    	}
-    	location ~ \.php$ {
+        listen 80 ;
+        server_name <domain>;
+        root <path to project>;
+        index index.php index.html index.htm;
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+        location ~ \.php$ {
             fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
             fastcgi_index index.php;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include fastcgi_params;
-    	}
-    }   
+        }
+    }  
     ```
+    
 - http-docker
     ```
     server {
@@ -62,13 +65,14 @@
         location ~ \.php$ {
 	        index index.php;
             #try_files $uri $uri/ /index.php?$args;
-            fastcgi_pass   unix:/var/run/php-fpm/php-fpm.sock;
+            fastcgi_pass   php:9000;
             fastcgi_index  index.php;
             fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include        fastcgi_params;
         }
     }
     ```
+    
 - 端口转发
     ```
     server
@@ -92,7 +96,17 @@
         }
     }
     ```
-- 大文件上传
+    
+- 大文件上传配置
     ```
+    // nginx.conf
+    client_max_body_size 128M; 
+    
+    // php.ini
+    memory_limit=128M; 每个PHP页面所吃掉的最大内存
+    file_uploads=on; 是否允许通过HTTP上传文件的开关
+    upload_tmp_dir=8M; 文件上传至服务器上存储临时文件的地方，如果没指定就会用系统默认的临时文件夹
+    upload_max_filesize=8M ;即允许上传文件大小的最大值
+    post_max_size=8M; 指通过表单POST给PHP的所能接收的最大值，包括表单里的所有值
     
     ```
