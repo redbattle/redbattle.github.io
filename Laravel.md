@@ -22,10 +22,10 @@
     
     ```
 - 执行缓存（修改配置文件）
-   ```
-   php artisan config:cache
-   ```
+    ```
+    php artisan config:cache
+    ```
 - 执行重载（修改seed文件）
-   ```
-   composer dump-autoload
-   ```
+    ```
+    composer dump-autoload
+    ```

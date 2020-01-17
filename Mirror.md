@@ -1,0 +1,55 @@
+## 镜像替换
+- [中科院镜像](https://mirrors.ustc.edu.cn/help/index.html)
+- [阿里云镜像](https://developer.aliyun.com/mirror)
+
+### Mac brew镜像
+- 替换 Homebrew
+    ```
+    git -C "$(brew --repo)" remote set-url origin https://mirrors.ustc.edu.cn/brew.git
+    ```
+- 替换 Homebrew Core
+    ```
+    git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
+    ```
+- 替换 Homebrew Cask
+    ```
+    git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+    ```
+- 替换 Homebrew-bottles
+    ```
+    # 对于 bash 用户：
+    echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+    source ~/.bash_profile
+    # 对于 zsh 用户：
+    echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+    source ~/.zshrc
+    ```
+
+### Mac终端走代理方式
+- 方法1 在终端中直接运行命令，这个办法的好处是简单直接，并且影响面很小（只对当前终端有效）
+    ```
+    export http_proxy=http://proxyAddress:port
+    ```
+- 方法2 把代理服务器地址写入shell配置文件`.bashrc`或者`.zshrc`直接在`.bashrc`或者`.zshrc`添加下面内容
+    ```
+    export http_proxy="http://localhost:port"
+    export https_proxy="http://localhost:port"
+    ```
+
+### Composer镜像
+- [阿里镜像](https://developer.aliyun.com/composer)
+
+### Yarn更换为淘宝镜像
+- 安装cnpm
+    ```
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    cnpm install yarn -g
+    ```
+- 查看下载源
+    ```
+    yarn config get registry
+    ```
+- 更换为淘宝源
+    ```
+    yarn config set registry https://registry.npm.taobao.org
+    ```

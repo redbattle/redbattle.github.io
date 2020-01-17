@@ -1,10 +1,12 @@
 ## Mac开发环境
+
 ### 安装 Homebrew
 - 安装命令
     ```
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ```  
-### 安装 nginx
+
+### 安装 Nginx
 - 安装命令
     ```
     brew install nginx
@@ -57,7 +59,8 @@
     listen 80;
     # 重启 nginx 如果提示 80 端口被占用，需要先kill一下 80 端口进程
     ```
-### 安装mysql
+
+### 安装MySQL
 - 安装命令
     ```
     brew install mysql
@@ -80,3 +83,5 @@
     ```
     mysql -u <username>
     ```
+
+### 安装 Docker

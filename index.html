@@ -70,41 +70,12 @@
         <div class="flex-center position-ref">
             <div class="content">
                 <div class="title m-b-md">
-                    Hello <span class="small">world</span>
+                    Hello <span class="small">World</span>
                 </div>
                 <div class="links">
-                    <p id="hitokoto"></p>
-                    <p id="creator"></p>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/redbattle/redbattle.github.io/blob/master/Laravel.md">Laravel笔记</a>
-                    <a href="https://github.com/redbattle/redbattle.github.io/blob/master/Git.md">Git命令</a>
-                    <a href="https://github.com/redbattle/redbattle.github.io/blob/master/Nginx.md">Nginx配置</a>
-                    <a href="https://github.com/redbattle/redbattle.github.io/blob/master/Dev-Env-Mac.md">Mac开发环境</a>
-                </div>
-                <div class="links">
-                    <a href="https://github.com/redbattle/redbattle.github.io/blob/master/Worktile.md">项目礼仪(Worktile)</a>
-                    <a href="https://hitokoto.cn/">Hitokoto</a>
+                    <a href="https://github.com/redbattle">GitHub</a>
                 </div>
             </div>
         </div>
-        <!-- 现代写法，推荐 -->
-        <script>
-            fetch('https://v1.hitokoto.cn')
-                .then(function (res){
-                    return res.json();
-                })
-                .then(function (data) {
-                    var hitokoto = document.getElementById('hitokoto');
-                    var creator = document.getElementById('creator');
-                    hitokoto.innerText = data.hitokoto;
-                    creator.innerText = '—— ' + data.creator;
-                })
-                .catch(function (err) {
-                    console.error(err);
-                })
-        </script>
-        <!-- 新 API 方法， 十分简洁 -->
-        <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
     </body>
 </html>
