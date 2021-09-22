@@ -1,18 +1,14 @@
 module.exports = {
   title: 'Redbattle',
-  description: 'Just playing around',
+  description: '知识管理',
   theme: 'vdoing',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
       { text: '开发', link: '/dev/' },
-      {
-        text: 'fix',
-        items: [
-          { text: 'Chinese', link: '/chinese' },
-          { text: 'Japanese', link: '/japanese' }
-        ]
-      },
+      { text: '环境', link: '/env/' },
+      { text: '项目', link: '/project/' },
+      { text: '配置', link: '/setting/' },
+      { text: '踩坑', link: '/fix/' },
     ],
     sidebar: 'structuring'
   }
