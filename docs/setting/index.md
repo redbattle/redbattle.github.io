@@ -6,5 +6,6 @@ categories:
   - setting
 tags:
   - 
+article: false
 ---
 # 配置
