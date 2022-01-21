@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 知识管理
-tagline: Web前端技术博客，积跬步以至千里，致敬每个爱学习的你。
+tagline: 致敬每个爱学习的你
 
 features: # 可选的
   - title: 踩坑
