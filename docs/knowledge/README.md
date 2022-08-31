@@ -5,6 +5,11 @@ permalink: /knowledge/
 article: false
 ---
 
+### 待整理内容
+- 函数调用栈
+- 堆和栈的区别
+- for in和Object key
+- $.extend $.fn.extend的区别
 - PWA
 - flutter
 - serverless
@@ -23,11 +28,3 @@ article: false
 - 小程序wxml里的include标签引入
 - 小程序wxs模块
 - bom和dom
-
-### 待整理内容
-```
-函数调用栈
-堆和栈的区别
-for in和Object key
-$.extend $.fn.extend的区别
-```
