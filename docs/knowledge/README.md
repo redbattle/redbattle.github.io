@@ -28,3 +28,8 @@ article: false
 - 小程序wxml里的include标签引入
 - 小程序wxs模块
 - bom和dom
+- WebCodecs
+- WebTransport
+- WebAssembly
+- HTTP/3
+- WebRTC
