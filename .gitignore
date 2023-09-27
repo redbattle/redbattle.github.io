@@ -3,3 +3,4 @@
 /.idea
 .DS_Store
 /docs/.vuepress/dist
+/yarn.lock
