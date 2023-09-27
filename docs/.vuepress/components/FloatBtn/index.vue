@@ -346,6 +346,7 @@ export default {
   },
 };
 </script>
+<!--
 <style lang="less" scoped>
 .suspend_ball_wrapper {
   position: absolute;
@@ -380,3 +381,4 @@ export default {
   }
 }
 </style>
+-->

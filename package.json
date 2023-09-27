@@ -10,7 +10,7 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
-    "vuepress": "^1.8.2",
-    "vuepress-theme-vdoing": "^1.8.3"
+    "vuepress": "1.8.2",
+    "vuepress-theme-vdoing": "1.8.3"
   }
 }
