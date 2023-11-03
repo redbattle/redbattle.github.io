@@ -10,6 +10,8 @@ module.exports = {
       { text: '配置', link: '/setting/' },
       { text: '知识点', link: '/knowledge/' },
     ],
-    sidebar: 'structuring'
+    sidebar: 'structuring',
+    nextLinks: false, // 默认值是 true 。设置为 false 来禁用所有页面的 下一篇 链接
+    prevLinks: false,  // 默认值是 true 。设置为 false 来禁用所有页面的 上一篇 链接
   }
 }

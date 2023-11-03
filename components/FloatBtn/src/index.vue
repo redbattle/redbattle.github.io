@@ -39,12 +39,13 @@
   indentNearEdgeDelay: 悬浮球贴边后延时缩进。单位：ms，默认 1000，为 0 则不延时
   
   ## 事件
-  clickFunc：点击悬浮球后回调事件
+  touchFunc：点击悬浮球后回调事件
   
   ## slots
   slotsDirection：插槽内容方向，默认置于悬浮球右边（如不设置且已开启 needNearEdge，则自动根据贴边情况来改变方向）
  */
 export default {
+  name: 'RbH5FloatBtn',
   data() {
     return {
       left: 0,
@@ -346,7 +347,6 @@ export default {
   },
 };
 </script>
-<!--
 <style lang="less" scoped>
 .suspend_ball_wrapper {
   position: absolute;
@@ -381,4 +381,3 @@ export default {
   }
 }
 </style>
--->
