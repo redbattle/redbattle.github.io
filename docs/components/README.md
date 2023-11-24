@@ -5,3 +5,7 @@ permalink: /components/
 article: false
 ---
 ## 组件
+
+- 组件的二次封装使用$attr 和$slots
+- 弧形边框
+- VTable
