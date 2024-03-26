@@ -88,17 +88,17 @@
       </li>
     </ul>
     <script>
-      document.querySelectorAll("ul li a").forEach((text) => {
+      document.querySelectorAll('ul li a').forEach(text => {
         text.innerHTML = text.innerText
-          .split("")
+          .split('')
           .map((letter, i) => {
-            let duration = Math.random() * 5;
-            return `<span style="animation-duration: ${
+            let duration = Math.random() * 5
+            return `<span style="animation-duration: ${0.25 + duration}s; animation-delay: ${
               0.25 + duration
-            }s; animation-delay: ${0.25 + duration}s">${letter}</span>`;
+            }s">${letter}</span>`
           })
-          .join("");
-      });
+          .join('')
+      })
     </script>
   </body>
 </html>
