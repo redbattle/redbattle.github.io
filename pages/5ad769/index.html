@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 常用命令 | Redbattle</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="知识管理">
+    <link rel="preload" href="/assets/css/0.styles.6157e93d.css" as="style"><link rel="preload" href="/assets/js/app.47cbe45c.js" as="script"><link rel="preload" href="/assets/js/2.1007eac7.js" as="script"><link rel="preload" href="/assets/js/51.029746bd.js" as="script"><link rel="prefetch" href="/assets/js/10.4a6c9478.js"><link rel="prefetch" href="/assets/js/11.9b934e79.js"><link rel="prefetch" href="/assets/js/12.fa876b06.js"><link rel="prefetch" href="/assets/js/13.fa93a409.js"><link rel="prefetch" href="/assets/js/14.453efc97.js"><link rel="prefetch" href="/assets/js/15.f092e6f8.js"><link rel="prefetch" href="/assets/js/16.f39f2030.js"><link rel="prefetch" href="/assets/js/17.f7ad0d51.js"><link rel="prefetch" href="/assets/js/18.8dee4f1b.js"><link rel="prefetch" href="/assets/js/19.c565efb9.js"><link rel="prefetch" href="/assets/js/20.018eb61f.js"><link rel="prefetch" href="/assets/js/21.59b06bfd.js"><link rel="prefetch" href="/assets/js/22.ab9313f2.js"><link rel="prefetch" href="/assets/js/23.3c9a73ca.js"><link rel="prefetch" href="/assets/js/24.568bed89.js"><link rel="prefetch" href="/assets/js/25.e9cc69ca.js"><link rel="prefetch" href="/assets/js/26.3568fcec.js"><link rel="prefetch" href="/assets/js/27.aa916f6a.js"><link rel="prefetch" href="/assets/js/28.609a0536.js"><link rel="prefetch" href="/assets/js/29.e8108d66.js"><link rel="prefetch" href="/assets/js/3.6699bd3d.js"><link rel="prefetch" href="/assets/js/30.fc88c5be.js"><link rel="prefetch" href="/assets/js/31.a7403afb.js"><link rel="prefetch" href="/assets/js/32.7a17f8e4.js"><link rel="prefetch" href="/assets/js/33.ee0f5635.js"><link rel="prefetch" href="/assets/js/34.ab1f1363.js"><link rel="prefetch" href="/assets/js/35.df166b85.js"><link rel="prefetch" href="/assets/js/36.e3b7f54c.js"><link rel="prefetch" href="/assets/js/37.ef6b2e30.js"><link rel="prefetch" href="/assets/js/38.6cb471cb.js"><link rel="prefetch" href="/assets/js/39.ceb9a325.js"><link rel="prefetch" href="/assets/js/4.f03c16ca.js"><link rel="prefetch" href="/assets/js/40.a2b44be7.js"><link rel="prefetch" href="/assets/js/41.9e74eceb.js"><link rel="prefetch" href="/assets/js/42.18d79b6a.js"><link rel="prefetch" href="/assets/js/43.c905ce43.js"><link rel="prefetch" href="/assets/js/44.8ce08d48.js"><link rel="prefetch" href="/assets/js/45.47685089.js"><link rel="prefetch" href="/assets/js/46.145f7e4d.js"><link rel="prefetch" href="/assets/js/47.8ceadbcc.js"><link rel="prefetch" href="/assets/js/48.3c2d966b.js"><link rel="prefetch" href="/assets/js/49.c1e86843.js"><link rel="prefetch" href="/assets/js/5.6512e900.js"><link rel="prefetch" href="/assets/js/50.fb1c0b60.js"><link rel="prefetch" href="/assets/js/52.7edb72bd.js"><link rel="prefetch" href="/assets/js/53.0d44b7d9.js"><link rel="prefetch" href="/assets/js/54.b0c31bb2.js"><link rel="prefetch" href="/assets/js/55.eeae33af.js"><link rel="prefetch" href="/assets/js/56.e7538a25.js"><link rel="prefetch" href="/assets/js/57.553133c6.js"><link rel="prefetch" href="/assets/js/58.935b3538.js"><link rel="prefetch" href="/assets/js/59.53f44fbd.js"><link rel="prefetch" href="/assets/js/6.5bbec12d.js"><link rel="prefetch" href="/assets/js/60.99466c90.js"><link rel="prefetch" href="/assets/js/61.398d132b.js"><link rel="prefetch" href="/assets/js/62.94055f25.js"><link rel="prefetch" href="/assets/js/63.97a39e47.js"><link rel="prefetch" href="/assets/js/64.e0de9d52.js"><link rel="prefetch" href="/assets/js/65.ed5ad9cb.js"><link rel="prefetch" href="/assets/js/66.f09e70b7.js"><link rel="prefetch" href="/assets/js/67.45f2e926.js"><link rel="prefetch" href="/assets/js/68.fd3249e2.js"><link rel="prefetch" href="/assets/js/69.5d37c6b7.js"><link rel="prefetch" href="/assets/js/7.e5e3f31b.js"><link rel="prefetch" href="/assets/js/70.9b535ed1.js"><link rel="prefetch" href="/assets/js/71.766ec19e.js"><link rel="prefetch" href="/assets/js/72.9d1b84f7.js"><link rel="prefetch" href="/assets/js/73.a5a8e8b3.js"><link rel="prefetch" href="/assets/js/74.6395a834.js"><link rel="prefetch" href="/assets/js/75.d5f557cc.js"><link rel="prefetch" href="/assets/js/76.be6bdab4.js"><link rel="prefetch" href="/assets/js/77.34bb822a.js"><link rel="prefetch" href="/assets/js/8.bac7a520.js"><link rel="prefetch" href="/assets/js/9.f27f0b3b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6157e93d.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Redbattle</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fix/" class="nav-link">踩坑</a></div><div class="nav-item"><a href="/env/" class="nav-link">环境</a></div><div class="nav-item"><a href="/project/" class="nav-link">项目</a></div><div class="nav-item"><a href="/setting/" class="nav-link">配置</a></div><div class="nav-item"><a href="/knowledge/" class="nav-link">知识点</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/fix/" class="nav-link">踩坑</a></div><div class="nav-item"><a href="/env/" class="nav-link">环境</a></div><div class="nav-item"><a href="/project/" class="nav-link">项目</a></div><div class="nav-item"><a href="/setting/" class="nav-link">配置</a></div><div class="nav-item"><a href="/knowledge/" class="nav-link">知识点</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/1d982e/" class="sidebar-link">项目礼仪（Worktile版本）</a></li><li><a href="/pages/5ad769/" aria-current="page" class="active sidebar-link">Git 常用命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/6222da/" class="sidebar-link">单元测试</a></li><li><a href="/pages/8cd84a/" class="sidebar-link">Github Pages 前端自动化部署</a></li><li><a href="/pages/e761f7/" class="sidebar-link">前端开发规范</a></li><li><a href="/pages/c01d57/" class="sidebar-link">创建VUE项目</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/categories/?category=project" title="分类" data-v-1cd794fe>project</a></li> <!----> <!----></ul> <div class="info" data-v-1cd794fe><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-09-22</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">
+          Git 常用命令
+        </h1> <!----> <div class="theme-vdoing-content content__default"><h3 id="基本命令"><a href="#基本命令" class="header-anchor">#</a> 基本命令</h3> <ul><li>生成 ssh key<div class="language-bash extra-class"><pre class="language-bash"><code>ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">&quot;&lt;邮箱&gt;&quot;</span> 
+</code></pre></div></li> <li>设置用户<div class="language- extra-class"><pre class="language-text"><code>git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;email@example.com&quot;
+// 编辑配置文件
+git config --global --edit
+</code></pre></div></li> <li>git init 初始化<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> init
+
+<span class="token function">git</span> remote <span class="token function">add</span> origin <span class="token operator">&lt;</span>仓库地址<span class="token operator">&gt;</span>
+</code></pre></div></li> <li>git clone 直接克隆<div class="language- extra-class"><pre class="language-text"><code>git clone &lt;仓库地址&gt;
+</code></pre></div></li> <li>创建分支<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 基于远程分支来创建分支</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> <span class="token operator">&lt;</span>branchName<span class="token operator">&gt;</span> origin/develop
+
+<span class="token comment"># 设置本地master分支关联远程master分支</span>
+<span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/master master
+</code></pre></div></li> <li>查看远程仓库信息<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> remote <span class="token parameter variable">-v</span>
+</code></pre></div></li> <li>修改远程仓库地址<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> remote set-url origin <span class="token operator">&lt;</span>仓库地址<span class="token operator">&gt;</span>
+</code></pre></div></li> <li>查看记录<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> log
+
+<span class="token comment"># 查看历史变更记录</span>
+<span class="token function">git</span> reflog
+</code></pre></div></li> <li>回滚操作<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 回退指定版本，回退后目标版本后面的提交消失。使用 `git push -f` 强制推送（不建议使用）</span>
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> <span class="token operator">&lt;</span>版本号<span class="token operator">&gt;</span>
+
+<span class="token comment"># 撤销某版本的修改提交，撤销后目标版本后面的提交不会消失，会生成一个新版本，可能会出现冲突，需要手动解决。使用 `git push` 推送（建议使用）</span>
+<span class="token function">git</span> revert <span class="token parameter variable">-n</span> <span class="token operator">&lt;</span>版本号<span class="token operator">&gt;</span>
+
+<span class="token comment"># 撤销pull</span>
+<span class="token function">git</span> reflog
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> HEAD@<span class="token punctuation">{</span>n<span class="token punctuation">}</span>
+</code></pre></div></li> <li>标签tag<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看标签</span>
+<span class="token function">git</span> tag
+
+<span class="token comment"># 新建标签</span>
+<span class="token function">git</span> tag <span class="token operator">&lt;</span>标签<span class="token operator">&gt;</span>
+
+<span class="token comment"># 删除标签</span>
+<span class="token function">git</span> tag <span class="token parameter variable">-d</span> <span class="token operator">&lt;</span>标签<span class="token operator">&gt;</span>
+
+<span class="token comment"># push 标签</span>
+<span class="token function">git</span> push origin <span class="token operator">&lt;</span>标签<span class="token operator">&gt;</span>
+
+<span class="token comment"># 推送所有标签</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">--tags</span>
+</code></pre></div></li></ul> <h3 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h3> <ul><li>删除本地分支<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch <span class="token parameter variable">-D</span> <span class="token operator">&lt;</span>分支<span class="token operator">&gt;</span>
+</code></pre></div></li> <li>精简分支列表里已远程被删除的分支<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> fetch <span class="token parameter variable">-p</span>
+</code></pre></div></li></ul> <h3 id="pull拉取"><a href="#pull拉取" class="header-anchor">#</a> pull拉取</h3> <ul><li>pull<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 拉取关联分支</span>
+<span class="token function">git</span> pull
+
+<span class="token comment"># 拉取远程master分支</span>
+<span class="token function">git</span> pull origin master
+</code></pre></div></li> <li>强制pull，远程master分支覆盖本地文件<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> fetch <span class="token parameter variable">--all</span>
+
+<span class="token function">git</span> reset <span class="token parameter variable">--hard</span> origin/master
+</code></pre></div></li></ul> <h3 id="push推送"><a href="#push推送" class="header-anchor">#</a> push推送</h3> <ul><li>push<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 推送关联分支</span>
+<span class="token function">git</span> push
+</code></pre></div></li> <li>强制push，覆盖远程master文件<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> push <span class="token parameter variable">-u</span> origin master <span class="token parameter variable">-f</span>
+</code></pre></div></li> <li>指定的提交（commit）应用于其他分支<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 将指定的提交应用于当前分支</span>
+<span class="token function">git</span> cherry-pick <span class="token operator">&lt;</span>commitId<span class="token operator">&gt;</span>
+
+<span class="token comment"># 将两个提交应用到当前分支</span>
+<span class="token function">git</span> cherry-pick <span class="token operator">&lt;</span>commitA<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>commitB<span class="token operator">&gt;</span>
+
+<span class="token comment"># 将从 A 到 B 的所有提交应用到当前分支</span>
+<span class="token function">git</span> cherry-pick A<span class="token punctuation">..</span>B
+</code></pre></div></li></ul> <h3 id="合并"><a href="#合并" class="header-anchor">#</a> 合并</h3> <ul><li>合并分支<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 切换到A分支</span>
+<span class="token function">git</span> checkout A_branch
+
+<span class="token comment"># 合并B分支到A分支</span>
+<span class="token function">git</span> merge B_branch
+</code></pre></div></li> <li>合并指定文件<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 切换到A分支</span>
+<span class="token function">git</span> checkout A_branch
+
+<span class="token comment"># 合并B分支上f文件到A分支上，将B分支上 f 文件追加补丁到A分支上 f文件。你可以接受或者拒绝补丁内容。</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">--patch</span> B_branch f.txt
+</code></pre></div></li> <li>解决合并冲突<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># dev-202201分支合并到dev分支出现合并冲突</span>
+
+<span class="token function">git</span> pull dev-202201
+
+<span class="token function">git</span> checkout dev
+
+<span class="token function">git</span> pull dev
+
+<span class="token function">git</span> merge --no-ff dev-202201 <span class="token comment"># merge后手动解决冲突</span>
+
+<span class="token function">git</span> push origin dev
+</code></pre></div></li></ul> <h3 id="重新弹出输入密码"><a href="#重新弹出输入密码" class="header-anchor">#</a> 重新弹出输入密码</h3> <div class="language- extra-class"><pre><code>```bash
+# fatal: Authentication failed for
+
+# 执行
+git config --system --unset credential.helper
+
+#或者在git的配置文件删除
+[credential]
+    helper = manager
+```
+</code></pre></div><h3 id="实现本地多个ssh-key"><a href="#实现本地多个ssh-key" class="header-anchor">#</a> 实现本地多个ssh-key</h3> <div class="language- extra-class"><pre><code>```bash
+# 在新增私钥的时候，通过指定不同的文件名来生成不同的私钥文件
+ssh-keygen -t rsa -f ~/.ssh/id_rsa.gitlab -C &quot;zhaiyu@126.com&quot;
+ssh-keygen -t ed25519 -f ~/.ssh/id_rsa.github -C &quot;zhaiyu@126.com&quot;
+
+# 新增ssh的配置文件，并修改权限
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+
+# 修改config文件的内容：
+Host github.com
+    IdentityFile ~/.ssh/id_rsa.github
+    User git # 计算机用户
+
+Host gitlab.blogcore.cn
+    IdentityFile ~/.ssh/id_rsa.gitlab
+    User git # 计算机用户
+    RSAAuthentication yes
+```
+</code></pre></div><h3 id="报错处理"><a href="#报错处理" class="header-anchor">#</a> 报错处理</h3> <ul><li>拉取代码报错error: cannot lock ref 'refs/remotes/origin/xxx':ref xxx is at OOO expected XXX<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 有些分支在远程其实早就被删除了，但是在你本地依然可以看见这些被删除的分支，在根目录下运行 </span>
+<span class="token function">git</span> remote prune origin
+<span class="token comment"># 刷新本地仓库与远程仓库的保持这些改动的同步，这样就不会报错了</span>
+</code></pre></div></li> <li>github拉取代码提示密码权限，可能是网络没有配置dns<div class="language-bash extra-class"><pre class="language-bash"><code><span class="token number">8.8</span>.8.8
+</code></pre></div></li></ul></div></div> <!----> <div class="page-edit"><!----> <div class="tags"><a href="/tags/?tag=Git" title="标签">#Git</a><a href="/tags/?tag=%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86" title="标签">#版本管理</a></div> <!----></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/60b7a1/"><div>两个区域关联滚动</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/42d342/"><div>烧虾球</div></a> <span>05-13</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/d0e6ce/"><div>二次开发</div></a> <span>12-20</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.47cbe45c.js" defer></script><script src="/assets/js/2.1007eac7.js" defer></script><script src="/assets/js/51.029746bd.js" defer></script>
+  </body>
+</html>

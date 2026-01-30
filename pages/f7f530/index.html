@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx配置 | Redbattle</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="知识管理">
+    <link rel="preload" href="/assets/css/0.styles.6157e93d.css" as="style"><link rel="preload" href="/assets/js/app.47cbe45c.js" as="script"><link rel="preload" href="/assets/js/2.1007eac7.js" as="script"><link rel="preload" href="/assets/js/69.5d37c6b7.js" as="script"><link rel="prefetch" href="/assets/js/10.4a6c9478.js"><link rel="prefetch" href="/assets/js/11.9b934e79.js"><link rel="prefetch" href="/assets/js/12.fa876b06.js"><link rel="prefetch" href="/assets/js/13.fa93a409.js"><link rel="prefetch" href="/assets/js/14.453efc97.js"><link rel="prefetch" href="/assets/js/15.f092e6f8.js"><link rel="prefetch" href="/assets/js/16.f39f2030.js"><link rel="prefetch" href="/assets/js/17.f7ad0d51.js"><link rel="prefetch" href="/assets/js/18.8dee4f1b.js"><link rel="prefetch" href="/assets/js/19.c565efb9.js"><link rel="prefetch" href="/assets/js/20.018eb61f.js"><link rel="prefetch" href="/assets/js/21.59b06bfd.js"><link rel="prefetch" href="/assets/js/22.ab9313f2.js"><link rel="prefetch" href="/assets/js/23.3c9a73ca.js"><link rel="prefetch" href="/assets/js/24.568bed89.js"><link rel="prefetch" href="/assets/js/25.e9cc69ca.js"><link rel="prefetch" href="/assets/js/26.3568fcec.js"><link rel="prefetch" href="/assets/js/27.aa916f6a.js"><link rel="prefetch" href="/assets/js/28.609a0536.js"><link rel="prefetch" href="/assets/js/29.e8108d66.js"><link rel="prefetch" href="/assets/js/3.6699bd3d.js"><link rel="prefetch" href="/assets/js/30.fc88c5be.js"><link rel="prefetch" href="/assets/js/31.a7403afb.js"><link rel="prefetch" href="/assets/js/32.7a17f8e4.js"><link rel="prefetch" href="/assets/js/33.ee0f5635.js"><link rel="prefetch" href="/assets/js/34.ab1f1363.js"><link rel="prefetch" href="/assets/js/35.df166b85.js"><link rel="prefetch" href="/assets/js/36.e3b7f54c.js"><link rel="prefetch" href="/assets/js/37.ef6b2e30.js"><link rel="prefetch" href="/assets/js/38.6cb471cb.js"><link rel="prefetch" href="/assets/js/39.ceb9a325.js"><link rel="prefetch" href="/assets/js/4.f03c16ca.js"><link rel="prefetch" href="/assets/js/40.a2b44be7.js"><link rel="prefetch" href="/assets/js/41.9e74eceb.js"><link rel="prefetch" href="/assets/js/42.18d79b6a.js"><link rel="prefetch" href="/assets/js/43.c905ce43.js"><link rel="prefetch" href="/assets/js/44.8ce08d48.js"><link rel="prefetch" href="/assets/js/45.47685089.js"><link rel="prefetch" href="/assets/js/46.145f7e4d.js"><link rel="prefetch" href="/assets/js/47.8ceadbcc.js"><link rel="prefetch" href="/assets/js/48.3c2d966b.js"><link rel="prefetch" href="/assets/js/49.c1e86843.js"><link rel="prefetch" href="/assets/js/5.6512e900.js"><link rel="prefetch" href="/assets/js/50.fb1c0b60.js"><link rel="prefetch" href="/assets/js/51.029746bd.js"><link rel="prefetch" href="/assets/js/52.7edb72bd.js"><link rel="prefetch" href="/assets/js/53.0d44b7d9.js"><link rel="prefetch" href="/assets/js/54.b0c31bb2.js"><link rel="prefetch" href="/assets/js/55.eeae33af.js"><link rel="prefetch" href="/assets/js/56.e7538a25.js"><link rel="prefetch" href="/assets/js/57.553133c6.js"><link rel="prefetch" href="/assets/js/58.935b3538.js"><link rel="prefetch" href="/assets/js/59.53f44fbd.js"><link rel="prefetch" href="/assets/js/6.5bbec12d.js"><link rel="prefetch" href="/assets/js/60.99466c90.js"><link rel="prefetch" href="/assets/js/61.398d132b.js"><link rel="prefetch" href="/assets/js/62.94055f25.js"><link rel="prefetch" href="/assets/js/63.97a39e47.js"><link rel="prefetch" href="/assets/js/64.e0de9d52.js"><link rel="prefetch" href="/assets/js/65.ed5ad9cb.js"><link rel="prefetch" href="/assets/js/66.f09e70b7.js"><link rel="prefetch" href="/assets/js/67.45f2e926.js"><link rel="prefetch" href="/assets/js/68.fd3249e2.js"><link rel="prefetch" href="/assets/js/7.e5e3f31b.js"><link rel="prefetch" href="/assets/js/70.9b535ed1.js"><link rel="prefetch" href="/assets/js/71.766ec19e.js"><link rel="prefetch" href="/assets/js/72.9d1b84f7.js"><link rel="prefetch" href="/assets/js/73.a5a8e8b3.js"><link rel="prefetch" href="/assets/js/74.6395a834.js"><link rel="prefetch" href="/assets/js/75.d5f557cc.js"><link rel="prefetch" href="/assets/js/76.be6bdab4.js"><link rel="prefetch" href="/assets/js/77.34bb822a.js"><link rel="prefetch" href="/assets/js/8.bac7a520.js"><link rel="prefetch" href="/assets/js/9.f27f0b3b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6157e93d.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Redbattle</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fix/" class="nav-link">踩坑</a></div><div class="nav-item"><a href="/env/" class="nav-link">环境</a></div><div class="nav-item"><a href="/project/" class="nav-link">项目</a></div><div class="nav-item"><a href="/setting/" class="nav-link">配置</a></div><div class="nav-item"><a href="/knowledge/" class="nav-link">知识点</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/fix/" class="nav-link">踩坑</a></div><div class="nav-item"><a href="/env/" class="nav-link">环境</a></div><div class="nav-item"><a href="/project/" class="nav-link">项目</a></div><div class="nav-item"><a href="/setting/" class="nav-link">配置</a></div><div class="nav-item"><a href="/knowledge/" class="nav-link">知识点</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/pages/f7f530/" aria-current="page" class="active sidebar-link">Nginx配置</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/58b6d5/" class="sidebar-link">Linux常用目录及常用命令</a></li><li><a href="/pages/5498a6/" class="sidebar-link">服务器访问</a></li><li><a href="/pages/25c10f/" class="sidebar-link">ts 配置文件</a></li><li><a href="/pages/d09a15/" class="sidebar-link">Tailwind</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-1cd794fe><div class="articleInfo" data-v-1cd794fe><ul class="breadcrumbs" data-v-1cd794fe><li data-v-1cd794fe><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-1cd794fe></a></li> <li data-v-1cd794fe><a href="/categories/?category=setting" title="分类" data-v-1cd794fe>setting</a></li> <!----> <!----></ul> <div class="info" data-v-1cd794fe><!----> <div title="创建时间" class="date iconfont icon-riqi" data-v-1cd794fe><a href="javascript:;" data-v-1cd794fe>2021-09-22</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">
+          Nginx配置
+        </h1> <!----> <div class="theme-vdoing-content content__default"><h3 id="https"><a href="#https" class="header-anchor">#</a> https</h3> <div class="language- extra-class"><pre><code>```bash
+# 80 重定向到 443
+server {
+    listen 80;
+    server_name &lt;domain&gt;;
+    return 301 https://$server_name$request_uri;
+}
+# 443 配置
+server {
+    listen 443;
+    server_name &lt;domain&gt;;
+    ssl on;
+    root &lt;path to project&gt;;
+    index index.html index.htm index.php;
+    ssl_certificate   /etc/nginx/cert/xxx.pem;
+    ssl_certificate_key  /etc/nginx/cert/xxx.key;
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+```
+</code></pre></div><h3 id="http"><a href="#http" class="header-anchor">#</a> http</h3> <div class="language- extra-class"><pre><code>```bash
+server {
+    listen 80 ;
+    server_name &lt;domain&gt;;
+    root &lt;path to project&gt;;
+    index index.php index.html index.htm;
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}  
+```
+</code></pre></div><h3 id="http-docker"><a href="#http-docker" class="header-anchor">#</a> http-docker</h3> <div class="language- extra-class"><pre><code>```bash
+server {
+    listen       80;
+    server_name  &lt;domain&gt;;
+    root &lt;path to project&gt;;
+    location / {
+        index  index.html index.htm index.php;
+        try_files $uri $uri/ /index.php?$args;
+    }
+    location ~ \.php$ {
+        index index.php;
+        #try_files $uri $uri/ /index.php?$args;
+        fastcgi_pass   php:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+```
+</code></pre></div><h3 id="端口转发"><a href="#端口转发" class="header-anchor">#</a> 端口转发</h3> <div class="language- extra-class"><pre><code>```bash
+server
+{
+    listen 80;
+    server_name &lt;domain&gt;;
+    location / 
+    {
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_pass http://localhost:9000;
+    }
+    location ~ .*\.(php|jsp|cgi|asp|aspx|flv|swf|xml)?$
+    { 
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_pass http://localhost:9000;
+        
+    }
+}
+```
+</code></pre></div><h3 id="大文件上传配置"><a href="#大文件上传配置" class="header-anchor">#</a> 大文件上传配置</h3> <div class="language- extra-class"><pre><code>```bash
+// 修改nginx.conf
+client_max_body_size 128M; 
+
+// PHP环境修改php.ini
+memory_limit=128M; 每个PHP页面所吃掉的最大内存
+file_uploads=on; 是否允许通过HTTP上传文件的开关
+upload_tmp_dir=8M; 文件上传至服务器上存储临时文件的地方，如果没指定就会用系统默认的临时文件夹
+upload_max_filesize=8M ;即允许上传文件大小的最大值
+post_max_size=8M; 指通过表单POST给PHP的所能接收的最大值，包括表单里的所有值
+```
+</code></pre></div><h3 id="其他配置"><a href="#其他配置" class="header-anchor">#</a> 其他配置</h3> <div class="language- extra-class"><pre><code>```bash
+# 定义Nginx运行的用户和用户组
+user www www;
+# nginx进程数，建议设置为等于CPU总核心数。
+worker_processes 8;
+# 全局错误日志定义类型，[ debug | info | notice | warn | error | crit ]
+error_log /var/log/nginx/error.log info;
+# 进程文件
+pid /var/run/nginx.pid;
+# 一个nginx进程打开的最多文件描述符数目，理论值应该是最多打开文件数（系统的值ulimit -n）与nginx进程数相除，但是nginx分配请求并不均匀，所以建议与ulimit -n的值保持一致。
+worker_rlimit_nofile 65535;
+# 工作模式与连接数上限
+events
+{
+    # 参考事件模型，use [ kqueue | rtsig | epoll | /dev/poll | select | poll ]; epoll模型是Linux 2.6以上版本内核中的高性能网络I/O模型，如果跑在FreeBSD上面，就用kqueue模型。
+    use epoll;
+    # 单个进程最大连接数（最大连接数=连接数*进程数）
+    worker_connections 65535;
+}
+
+# 设定http服务器
+http
+{
+    include mime.types; # 文件扩展名与文件类型映射表
+    default_type application/octet-stream; # 默认文件类型
+    # charset utf-8; #默认编码
+    server_names_hash_bucket_size 128; # 服务器名字的hash表大小
+    client_header_buffer_size 32k; # 上传文件大小限制
+    large_client_header_buffers 4 64k; # 设定请求缓
+    client_max_body_size 8m; # 设定请求缓
+    sendfile on; # 开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。
+    autoindex on; # 开启目录列表访问，合适下载服务器，默认关闭。
+    tcp_nopush on; # 防止网络阻塞
+    tcp_nodelay on; # 防止网络阻塞
+    keepalive_timeout 120; # 长连接超时时间，单位是秒
+    # FastCGI相关参数是为了改善网站的性能：减少资源占用，提高访问速度。下面参数看字面意思都能理解。
+    fastcgi_connect_timeout 300;
+    fastcgi_send_timeout 300;
+    fastcgi_read_timeout 300;
+    fastcgi_buffer_size 64k;
+    fastcgi_buffers 4 64k;
+    fastcgi_busy_buffers_size 128k;
+    fastcgi_temp_file_write_size 128k;
+    # gzip模块设置
+    gzip on; # 开启gzip压缩输出
+    gzip_min_length 1k; # 最小压缩文件大小
+    gzip_buffers 4 16k; # 压缩缓冲区
+    gzip_http_version 1.0; # 压缩版本（默认1.1，前端如果是squid2.5请使用1.0）
+    gzip_comp_level 2; # 压缩等级
+    gzip_types text/plain application/x-javascript text/css application/xml;
+    # 压缩类型，默认就已经包含text/html，所以下面就不用再写了，写上去也不会有问题，但是会有一个warn。
+    gzip_vary on;
+    # limit_zone crawler $binary_remote_addr 10m; #开启限制IP连接数的时候需要使用
+    upstream blog.ha97.com {
+        # upstream的负载均衡，weight是权重，可以根据机器配置定义权重。weigth参数表示权值，权值越高被分配到的几率越大。
+        server 192.168.80.121:80 weight=3;
+        server 192.168.80.122:80 weight=2;
+        server 192.168.80.123:80 weight=3;
+    }
+    #虚拟主机的配置
+    server
+    {
+        #监听端口
+        listen 80;
+        #域名可以有多个，用空格隔开
+        server_name www.ha97.com ha97.com;
+        index index.html index.htm index.php;
+        root /data/www/ha97;
+        location ~ .*\.(php|php5)?$
+        {
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_index index.php;
+            include fastcgi.conf;
+        }
+        #图片缓存时间设置
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+        {
+            expires 10d;
+        }
+        #JS和CSS缓存时间设置
+        location ~ .*\.(js|css)?$
+        {
+            expires 1h;
+        }
+        #日志格式设定
+        log_format access '$remote_addr - $remote_user [$time_local] &quot;$request&quot; '
+        '$status $body_bytes_sent &quot;$http_referer&quot; '
+        '&quot;$http_user_agent&quot; $http_x_forwarded_for';
+        #定义本虚拟主机的访问日志
+        access_log /var/log/nginx/ha97access.log access;
+        #对 &quot;/&quot; 启用反向代理
+        location / {
+            proxy_pass http://127.0.0.1:88;
+            proxy_redirect off;
+            proxy_set_header X-Real-IP $remote_addr;
+            #后端的Web服务器可以通过X-Forwarded-For获取用户真实IP
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            #以下是一些反向代理的配置，可选。
+            proxy_set_header Host $host;
+            client_max_body_size 10m; #允许客户端请求的最大单文件字节数
+            client_body_buffer_size 128k; #缓冲区代理缓冲用户端请求的最大字节数，
+            proxy_connect_timeout 90; #nginx跟后端服务器连接超时时间(代理连接超时)
+            proxy_send_timeout 90; #后端服务器数据回传时间(代理发送超时)
+            proxy_read_timeout 90; #连接成功后，后端服务器响应时间(代理接收超时)
+            proxy_buffer_size 4k; #设置代理服务器（nginx）保存用户头信息的缓冲区大小
+            proxy_buffers 4 32k; #proxy_buffers缓冲区，网页平均在32k以下的设置
+            proxy_busy_buffers_size 64k; #高负荷下缓冲大小（proxy_buffers*2）
+            proxy_temp_file_write_size 64k;
+            #设定缓存文件夹大小，大于这个值，将从upstream服务器传
+        }
+        #设定查看Nginx状态的地址
+        location /NginxStatus {
+            stub_status on;
+            access_log on;
+            auth_basic &quot;NginxStatus&quot;;
+            auth_basic_user_file conf/htpasswd;
+            # htpasswd文件的内容可以用apache提供的htpasswd工具来产生。
+        }
+        #本地动静分离反向代理配置
+        #所有jsp的页面均交由tomcat或resin处理
+        location ~ .(jsp|jspx|do)?$ {
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass http://127.0.0.1:8080;
+        }
+        #所有静态文件由nginx直接读取不经过tomcat或resin
+        location ~ .*.(htm|html|gif|jpg|jpeg|png|bmp|swf|ioc|rar|zip|txt|flv|mid|doc|ppt|pdf|xls|mp3|wma)$
+        {
+            expires 15d;
+        }
+        location ~ .*.(js|css)?$
+        {
+            expires 1h;
+        }
+    }
+}
+```</code></pre></div></div></div> <!----> <div class="page-edit"><!----> <div class="tags"><a href="/tags/?tag=Nginx" title="标签">#Nginx</a><a href="/tags/?tag=%E6%9C%8D%E5%8A%A1%E5%99%A8" title="标签">#服务器</a><a href="/tags/?tag=Http" title="标签">#Http</a><a href="/tags/?tag=Https" title="标签">#Https</a><a href="/tags/?tag=%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91" title="标签">#端口转发</a></div> <!----></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/60b7a1/"><div>两个区域关联滚动</div></a> <span>01-27</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/42d342/"><div>烧虾球</div></a> <span>05-13</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/d0e6ce/"><div>二次开发</div></a> <span>12-20</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><!----> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.47cbe45c.js" defer></script><script src="/assets/js/2.1007eac7.js" defer></script><script src="/assets/js/69.5d37c6b7.js" defer></script>
+  </body>
+</html>
